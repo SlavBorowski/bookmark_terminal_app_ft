@@ -1,11 +1,12 @@
 require_relative 'bookmark_helper'
 
 class Bookmark
-  attr_reader :tags, :title, :url, :description
+  attr_reader :id, :tags, :title, :url, :description
 
   include BookmarkHelper
 
-  def initialize(title, url, tags, description)
+  def initialize(id, title, url, tags, description)
+    @id = id
     @title = title
     @url = url
     @tags = tags
