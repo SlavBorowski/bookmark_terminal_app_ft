@@ -16,9 +16,7 @@ class Bookmark
   def self.bookmark_user_input
     bookmark = {}
     INPUTS.each do |input|
-      if input == :tags
-        puts "Type out your tags separated with comma's eg. code,reading"
-      end
+      puts "Type out your tags separated with comma's eg. code,reading" if input == :tags
       puts "Whats the #{input}?"
       print '> '
       bookmark[input] = gets.chomp

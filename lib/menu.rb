@@ -8,10 +8,10 @@ class Menu
   end
 
   def selection
-    PROMPT.select("Welcome to the bookmarks app!") do |menu|
-      menu.choice({ name: "View all bookmarks", value: "1"})
-      menu.choice({ name: "Create bookmark", value: "2"})
-      menu.choice({ name: "Exit", value: "3"})
+    PROMPT.select('Welcome to the bookmarks app!') do |menu|
+      menu.choice({ name: 'View all bookmarks', value: '1' })
+      menu.choice({ name: 'Create bookmark', value: '2' })
+      menu.choice({ name: 'Exit', value: '3' })
     end
   end
 
@@ -23,6 +23,11 @@ class Menu
     puts table
   end
 
+  def quit
+    @bookmark_repository.write_bookmarks
+    exit
+  end
+
   def router
     loop do
       case selection
@@ -31,10 +36,7 @@ class Menu
       when '2'
         @bookmark_repository.create_bookmark
       when '3'
-        @bookmark_repository.write_bookmarks
-        exit
-      else
-        puts 'You need to select 1, 2 or 3!'
+        quit
       end
     end
   end

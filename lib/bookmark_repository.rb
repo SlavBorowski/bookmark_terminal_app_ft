@@ -1,10 +1,11 @@
 require 'json'
-require_relative "bookmark_helper"
+require_relative 'bookmark_helper'
 
 class BookmarkRepository
   attr_reader :bookmarks
+
   include BookmarkHelper
-  def initialize 
+  def initialize
     @bookmarks = read_bookmarks
   end
 
@@ -13,21 +14,21 @@ class BookmarkRepository
     JSON.parse(data).map do |bookmark|
       Bookmark.new(
         bookmark['id'],
-        bookmark["title"],
-        bookmark["url"],
-        bookmark["tags"],
-        bookmark["description"]
+        bookmark['title'],
+        bookmark['url'],
+        bookmark['tags'],
+        bookmark['description']
       )
     end
   end
 
-  def write_bookmarks 
+  def write_bookmarks
     data = @bookmarks.map do |bookmark|
       {
-        id: bookmark.id, 
-        title: bookmark.title, 
-        url: bookmark.url, 
-        tags: bookmark.tags, 
+        id: bookmark.id,
+        title: bookmark.title,
+        url: bookmark.url,
+        tags: bookmark.tags,
         description: bookmark.description
       }
     end
@@ -46,6 +47,6 @@ class BookmarkRepository
   end
 
   def validate_tags(tags)
-    tags.split(",")
+    tags.split(',')
   end
 end
