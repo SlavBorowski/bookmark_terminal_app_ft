@@ -40,12 +40,12 @@ class BookmarkRepository
       @bookmarks.length + 1,
       bookmark[:title],
       bookmark[:url],
-      handle_tags(bookmark[:tags]),
+      validate_tags(bookmark[:tags]),
       bookmark[:description]
     )
   end
 
-  def handle_tags(tags) 
+  def validate_tags(tags)
     tags.split(",")
   end
 end
