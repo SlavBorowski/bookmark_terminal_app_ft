@@ -1,5 +1,6 @@
 # gems
 require 'terminal-table'
+require 'tty-prompt'
 # files
 require_relative 'menu'
 require_relative 'bookmark'
