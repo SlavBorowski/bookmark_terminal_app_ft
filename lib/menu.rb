@@ -7,16 +7,12 @@ class Menu
     @bookmark_repository = BookmarkRepository.new
   end
 
-  def display_menu
-    puts 'Welcome to the bookmarks app!'
-    puts '1. View all bookmarks'
-    puts '2. Create bookmark'
-    puts '3. Exit'
-  end
-
   def selection
-    print '> '
-    gets.chomp
+    PROMPT.select("Welcome to the bookmarks app!") do |menu|
+      menu.choice({ name: "View all bookmarks", value: "1"})
+      menu.choice({ name: "Create bookmark", value: "2"})
+      menu.choice({ name: "Exit", value: "3"})
+    end
   end
 
   def terminal_table
@@ -29,7 +25,6 @@ class Menu
 
   def router
     loop do
-      display_menu
       case selection
       when '1'
         terminal_table
