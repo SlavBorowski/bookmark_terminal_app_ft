@@ -9,4 +9,19 @@ require_relative '../lib/bookmark'
 require_relative '../lib/bookmark_repository'
 
 app = Menu.new
-app.router
+
+def help_docs 
+  puts "-l and --list"
+  puts "shortcut to get to the list view of bookmarks"
+end
+
+if ARGV[0] == "-h"
+  help_docs
+  exit
+end
+
+if ARGV[0] == "-l" || ARGV[0] == "--list"
+  app.terminal_table
+else
+  app.router
+end
