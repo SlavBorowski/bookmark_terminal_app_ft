@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# gems
+require 'terminal-table'
+require 'tty-prompt'
+# files
+require_relative '../lib/menu'
+require_relative '../lib/bookmark'
+require_relative '../lib/bookmark_repository'
+
+app = Menu.new
+app.router
