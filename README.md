@@ -1,5 +1,11 @@
 # Bookmarking Terminal App
 
+## Project Management
+
+I used Trello to manage the different tasks that needed to be done.
+
+Here is a link to [my board](https://trello.com/b/N6jfOBNf/bookmarks-app-fast-track).
+
 ## Installation and Setup
 
 1. Install ruby, we recommend using [asdf](https://asdf-vm.com/)
