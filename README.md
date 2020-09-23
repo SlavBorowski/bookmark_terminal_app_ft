@@ -60,3 +60,11 @@ Here is a link to [my board](https://trello.com/b/N6jfOBNf/bookmarks-app-fast-tr
 ## Tests
 
 Here is a link to my [testing spreadsheet]().
+
+If you use RSpec you can say...
+
+To run tests run:
+
+```bash
+rspec spec
+```
