@@ -18,13 +18,21 @@ git clone https://github.com/harrisonmalone/bookmark_terminal_app_ft.git ~/bookm
 ~/bookmark_terminal_app_ft/bin/setup
 ```
 
-5. Open your `.bash_profile` and add this line
+5. Open your `.bash_profile` 
+
+```bash
+open ~/.bash_profile
+```
+
+6. Add this line
 
 ```bash
 export PATH=$PATH:$HOME/bookmark_terminal_app_ft/bin
 ```
 
-6. To run the app type
+7. Restart your terminal to make sure .bash_profile loads the app into your PATH
+
+8. To run the app type
 
 ```bash
 bookmarks
