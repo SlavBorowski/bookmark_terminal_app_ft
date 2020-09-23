@@ -32,7 +32,7 @@ export PATH=$PATH:$HOME/bookmark_terminal_app_ft/bin
 
 7. Restart your terminal to make sure `.bash_profile` loads the app into your PATH
 
-8. To run the app type
+8. Run the `bookmarks` executable to start the app
 
 ```bash
 bookmarks
