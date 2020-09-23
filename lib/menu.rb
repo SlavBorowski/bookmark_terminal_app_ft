@@ -17,7 +17,7 @@ class Menu
 
   def terminal_table
     rows = @bookmark_repository.bookmarks.map do |bookmark|
-      [bookmark.id, bookmark.title, bookmark.url, bookmark.tags, bookmark.description]
+      bookmark.to_a 
     end
     table = Terminal::Table.new({ headings: HEADINGS, rows: rows })
     puts table

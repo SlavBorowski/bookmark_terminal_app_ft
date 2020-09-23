@@ -13,6 +13,10 @@ class Bookmark
     @description = description
   end
 
+  def to_a
+    [@id, @title, @url, @tags, @description]
+  end
+
   def self.bookmark_user_input
     bookmark = {}
     INPUTS.each do |input|
