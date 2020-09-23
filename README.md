@@ -17,3 +17,15 @@ git clone https://github.com/harrisonmalone/bookmark_terminal_app_ft.git ~/bookm
 ```bash
 ~/bookmark_terminal_app_ft/bin/setup
 ```
+
+5. Open your `.bash_profile` and add this line
+
+```bash
+export PATH=$PATH:$HOME/bookmark_terminal_app_ft/bin
+```
+
+6. To run the app type
+
+```bash
+bookmarks
+```
